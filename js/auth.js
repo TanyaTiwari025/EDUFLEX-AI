@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = loginForm.email.value;
             const password = loginForm.password.value;
 
+          
             // Check stored user details
             const storedEmail = localStorage.getItem('email');
             const storedPassword = localStorage.getItem('password');
