@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | EDUFLEXAI</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="javascript:void(0)" method="POST">
+            <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+            <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+
+            <button type="submit">Login</button>
+
+            <!-- Social login buttons -->
+            <div class="social-login">
+                <button class="google-btn">Google</button>
+                <button class="facebook-btn">Facebook</button>
+                <button class="linkedin-btn">LinkedIn</button>
+            </div>
+        </form>
+        <div class="or-divider">OR</div>
+        <p>Don't have an account? <a href="../pages/signup.html">Sign Up here</a></p>
+    </div>
+</body>
+</html>
