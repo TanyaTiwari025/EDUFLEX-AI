@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - EDUFLEXAI</title>
     <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .welcome-heading span {
+            display: inline-block;
+            animation: bounce 0.5s ease infinite;
+            animation-iteration-count: 5;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .welcome-heading span:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+        
+        .welcome-heading span:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="logo" id="logo">EDUFLEXAI</div>
         <nav id="navbar">
@@ -16,8 +41,8 @@
         </nav>
     </header>
 
+    <!-- Sidebar Menu -->
     <div id="sidebar" class="sidebar">
-        <h3>Menu</h3>
         <a href="../pages/dashboard.html">Dashboard</a>
         <a href="../pages/career-path.html">Career Path</a>
         <a href="../pages/courses.html">Courses</a>
@@ -27,16 +52,322 @@
         <a href="../pages/networking.html">Networking</a>
     </div>
 
-    <main>
-        <h2>Welcome to EDUFLEXAI!</h2>
-        <!-- Your main content goes here -->
+    <!-- Hero Section -->
+    <main class="hero">
+        <div class="hero-content">
+            <h2 class="welcome-heading">
+                <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+                <span>t</span><span>o</span>
+                <span>E</span><span>D</span><span>U</span><span>F</span><span>L</span><span>E</span><span>X</span><span>A</span><span>I</span>!   
+            </h2>
+            <p>Your AI-powered solution to flexible education.<br>
+            Explore personalized courses, career guidance, and more!<br></p>
+        </div>
+        
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About EDUFLEXAI</h2>
+            <p>At EDUFLEXAI, we are driven by a passion for reshaping education through innovative AI-powered solutions. In today’s fast-paced world,
+                education needs to be as flexible as possible, without compromising quality. Our platform is designed to adapt to your learning needs,
+                offering personalized courses, career guidance, and expert mentorship to help you stay ahead.
+                Our mission is to empower students and professionals alike, by delivering tailor-made learning experiences that are accessible anytime,
+                anywhere. With AI at the core, we analyze your learning patterns, strengths, and interests to guide you through the right educational
+                and career pathways. Whether you're a student exploring your future career options or a professional looking to upskill, EDUFLEXAI
+                provides the resources, insights, and support you need to achieve your goals. Join us in embracing the future of education, where
+                flexibility and personalization are key.
+            </p>
+        </section>
+
+        <!-- Our Features Section -->
+        <section id="features">
+            <h2 class="features-title">Our Features</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <img src="img/flexible-learning.svg" alt="Flexible Learning" class="feature-icon">
+                    <h3>Flexible Learning</h3>
+                    <p>Personalize your learning experience with courses tailored to your needs and goals.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="img/career-guidance.svg" alt="Career Guidance" class="feature-icon">
+                    <h3>Career Guidance</h3>
+                    <p>Get expert advice and access resources to navigate your career path effectively.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="img/ai-powered.svg" alt="AI-Powered Insights" class="feature-icon">
+                    <h3>AI-Powered Insights</h3>
+                    <p>Our AI technology helps you track progress and suggests personalized learning paths.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="img/placement-guidance.svg" alt="Placement Guidance" class="feature-icon">
+                    <h3>Placement Guidance</h3>
+                    <p>Receive step-by-step assistance in securing internships and job placements.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="img/networking.svg" alt="Networking" class="feature-icon">
+                    <h3>Networking Opportunities</h3>
+                    <p>Connect with peers, mentors, and industry experts to expand your professional network.</p>
+                </div>
+                <!-- Expert Access -->
+                <div class="feature-card">
+                    <img src="img/expert-access.svg" alt="Expert Access" class="feature-icon">
+                    <h3>Expert Access</h3>
+                    <p>Access one-on-one mentorship from industry professionals and academic experts.</p>
+                </div>
+                <!-- Skill Development -->
+                <div class="feature-card">
+                    <img src="img/skill-development.svg" alt="Skill Development" class="feature-icon">
+                    <h3>Skill Development</h3>
+                    <p>Enhance your skills with practical training, workshops, and project-based learning.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials -->
+         
+        <section id="learners" class="learners-section">
+            <h2>Our Learner's Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <p>"EDUFLEXAI has transformed my learning experience. The AI-powered resources helped me understand complex topics easily!"</p>
+                    <h4>- Aisha Khan</h4>
+                </div>
+                <div class="testimonial-slide">
+                    <p>"I love the personalized learning paths! It feels like the course was designed just for me."</p>
+                    <h4>- Rajesh Sharma</h4>
+                </div>
+                <div class="testimonial-slide">
+                    <p>"The interactive features and flashcards are a game-changer. I feel more engaged and motivated to learn!"</p>
+                    <h4>- Priya Mehta</h4>
+                </div>
+                <div class="testimonial-slide">
+                    <p>"Thanks to EDUFLEXAI, I've improved my skills tremendously. The AI insights have been incredibly helpful."</p>
+                    <h4>- Anil Gupta</h4>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <!-- features Section -->
+            <div class="features-section">
+                <h2>Features</h2>
+                <div class="feature-cards">
+                    <div class="card">
+                        <h3><a href="https://www.edutopia.org/article/importance-personalized-learning" target="_blank">Personalized Learning</a></h3>
+                        <p>Tailored educational experiences designed to meet individual learning needs and preferences.</p>
+                    </div>
+                    <div class="card">
+                        <h3><a href="https://www.educationcorner.com/what-is-blended-learning.html" target="_blank">Blended Learning</a></h3>
+                        <p>A combination of traditional classroom teaching and online learning for enhanced educational outcomes.</p>
+                    </div>
+                    <div class="card">
+                        <h3><a href="https://www.teachthought.com/technology/future-of-education-technology/" target="_blank">AI-Driven Insights</a></h3>
+                        <p>Utilizing artificial intelligence to analyze student data and improve educational strategies.</p>
+                    </div>
+                    <div class="card">
+                        <h3><a href="https://www.weforum.org/agenda/2023/03/online-learning-is-evolving-how-will-it-affect-education/" target="_blank">Skill Development Workshops</a></h3>
+                        <p>Interactive sessions aimed at equipping learners with essential skills for the modern workforce.</p>
+                    </div>
+                    <div class="card">
+                        <h3><a href="https://www.educationworld.com/a_news/leveraging-ai-inclusive-education-2023-05-05" target="_blank">Expert Access</a></h3>
+                        <p>Connect with industry experts and educators for mentorship and guidance.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <!-- Blog-News Section -->
+        <section class="blog-news">
+            <h2>News-Blog Post</h2>
+            <div class="news-cards">
+                <div class="card">
+                    <h3>AI-Powered Learning Platforms Transform Education</h3>
+                    <p>Explore how AI-driven platforms are personalizing education and enhancing student engagement.</p>
+                    <a href="https://www.educationtech.com/news/ai-powered-learning-platforms-transform-education">Read more</a>
+                </div>
+                <div class="card">
+                    <h3>The Rise of AI Tutors in the Classroom</h3>
+                    <p>AI tutors are becoming an integral part of modern classrooms, offering real-time support to students.</p>
+                    <a href="https://www.edutopia.org/article/rise-ai-tutors-classroom">Read more</a>
+                </div>
+                <div class="card">
+                    <h3>How AI is Reshaping Educational Assessment</h3>
+                    <p>AI is changing the way assessments are created and evaluated, making them more efficient and effective.</p>
+                    <a href="https://www.thetechedvocate.org/how-ai-is-reshaping-educational-assessment/">Read more</a>
+                </div>
+                <div class="card">
+                    <h3>AI in Higher Education: Opportunities and Challenges</h3>
+                    <p>Delve into the benefits and potential pitfalls of incorporating AI in higher education.</p>
+                    <a href="https://www.insidehighered.com/news/2023/05/01/ai-higher-education-opportunities-and-challenges">Read more</a>
+                </div>
+                <div class="card">
+                    <h3>Leveraging AI for Inclusive Education</h3>
+                    <p>Learn how AI is being utilized to create more inclusive educational environments for all students.</p>
+                    <a href="https://www.educationworld.com/a_news/leveraging-ai-inclusive-education-2023-05-05">Read more</a>
+                </div>
+                <div class="card">
+                    <h3>The Future of AI in K-12 Education</h3>
+                    <p>A look at how AI technologies are being integrated into K-12 education systems worldwide.</p>
+                    <a href="https://www.k12digest.com/future-of-ai-in-k-12-education/">Read more</a>
+                </div>
+                <div class="card">
+                    <h3>AI Tools for Educators: Enhancing Teaching Strategies</h3>
+                    <p>Educators are adopting AI tools to enhance teaching strategies and improve student learning outcomes.</p>
+                    <a href="https://www.teachthought.com/technology/ai-tools-educators-enhancing-teaching-strategies/">Read more</a>
+                </div>
+                <div class="card">
+                    <h3>Global Initiatives for AI-Driven Education</h3>
+                    <p>Various countries are launching initiatives to incorporate AI into their educational systems, aiming for a more innovative future.</p>
+                    <a href="https://www.educationworld.com/a_news/global-initiatives-ai-driven-education-2023-08-20">Read more</a>
+                </div> 
+            </div>
+        </section>
+        
+        
+
+        <!-- FAQ Section -->
+         <section id="faq" class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+
+                <div class="faq-item">
+                    <button class="faq-question">What is EDUFLEXAI and how does it work?</button>
+                    <div class="faq-answer">
+                        <p>EDUFLEXAI is an AI-powered educational platform that offers personalized learning, career guidance, and skill development. The AI analyzes your preferences and suggests the best learning paths.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">How can I personalize my learning experience on EDUFLEXAI?</button>
+                    <div class="faq-answer">
+                        <p>The AI system tailors recommendations based on your course history, preferences, and career goals, creating a unique learning path for you.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">What courses are available on the platform?</button>
+                    <div class="faq-answer">
+                        <p>EDUFLEXAI offers a variety of courses, including technical, non-technical, and career-focused programs across multiple domains.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">How does the AI system recommend personalized learning paths?</button>
+                    <div class="faq-answer">
+                        <p>The AI uses your learning history, goals, and preferences to create a customized path, adapting as you progress.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">Can I track my progress and performance using EDUFLEXAI?</button>
+                    <div class="faq-answer">
+                        <p>Yes, you can monitor your learning journey, track completed courses, and view performance insights via the dashboard.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">What kind of career guidance does the platform provide?</button>
+                    <div class="faq-answer">
+                        <p>EDUFLEXAI offers career path guidance, expert mentorship, placement support, and curated learning resources for career development.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">How can I access mentorship and expert guidance?</button>
+                    <div class="faq-answer">
+                        <p>You can book sessions with industry experts and mentors through the "Expert Access" feature to get personalized advice.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">Is there a way to get placement assistance through EDUFLEXAI?</button>
+                    <div class="faq-answer">
+                        <p>Yes, we provide placement guidance, job search resources, and interview prep tips to help you land the right job.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">What resources are available for skill development?</button>
+                    <div class="faq-answer">
+                        <p>EDUFLEXAI offers a range of courses, tools, and resources designed to help you improve both soft and technical skills.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">How do I connect with peers and mentors for networking?</button>
+                    <div class="faq-answer">
+                        <p>The platform has a "Networking" feature where you can interact with peers, industry experts, and mentors.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">What are the pricing plans for using EDUFLEXAI?</button>
+                    <div class="faq-answer">
+                        <p>EDUFLEXAI offers free basic access to some features, with premium subscriptions for full access to courses, expert sessions, and more.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">Can I access EDUFLEXAI on mobile devices?</button>
+                    <div class="faq-answer">
+                        <p>Yes, the platform is mobile-friendly and can be accessed via smartphones and tablets.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">How secure is my personal information on the platform?</button>
+                    <div class="faq-answer">
+                        <p>We use advanced encryption methods and secure databases to protect your data and personal information.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">What should I do if I forget my login credentials?</button>
+                    <div class="faq-answer">
+                        <p>Click on the "Forgot Password" link on the login page to reset your password. You can also contact support for help.</p>
+                    </div>
+                </div>
+        
+                <div class="faq-item">
+                    <button class="faq-question">Is customer support available if I encounter technical issues?</button>
+                    <div class="faq-answer">
+                        <p>Yes, our support team is available 24/7 to assist with any technical problems or account-related queries.</p>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>Contact | Privacy Policy | Terms of Service</p>
-    </footer>
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="text">
+            <h3>About Us</h3>
+            <p>Our mission is to revolutionize education by merging traditional learning methods<br>
+                with the power of artificial intelligence. By delivering high-quality content<br>
+                and guidance, we bridge the gap between academic knowledge and real-world skills,<br>
+                preparing you for a successful future.<br>
+            </p>
+           
+
+        </div>
+        <div class="text">
+            <h2>Connect on</h2>
+            <p>Twitter</p>
+            <p>linkedIn</p>
+            <p>Instagram</p>
+        </div>
+    </div>
 
     <script src="../js/auth.js"></script>
     <script src="../js/sidebar.js"></script>
+    <script src="../js/FAQ.js"></script>
+    <script src="../js/learners.js"></script>
+
 </body>
 </html>
