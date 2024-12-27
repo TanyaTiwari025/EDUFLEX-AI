@@ -16,23 +16,23 @@ router.post('/signup', async (req, res) => {
     // Check for existing user
     const existingUser = await User.findOne( { email:"email" });
     if (existingUser) {
-        return res.status(400).send('Username or email already exists');
+        return res.status(400).json({message:'Username or email already exists'});
     }
-
-   
-
     // Create a new user instance
     const newUser = new User({firstName,lastName,email, password});
 
   
         
         // Save user to the database
-        await newUser.save();
+        const response = await newUser.save();
+        console.log(response)
         res.send('Signup successful! User data saved.');
+
+
+        
     } catch (err) {
         console.error(err);
         res.status(500).send('Server error');
     }
 });
-
 module.exports = router;
