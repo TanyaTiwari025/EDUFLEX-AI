@@ -1,0 +1,243 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.7;
+    background-image: linear-gradient(135deg, #e0eafc 10%, #cfdef3 100%);
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #3498db;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: translateY(-3px);
+}
+
+/* Main section */
+main {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 60px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    background-color: #3498db;
+    bottom: -15px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+section h2:hover:after {
+    width: 120px;
+}
+
+/* List styling */
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+ul li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+ul li strong {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+ul li a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Card-like section styling */
+section#tools-resources ul li, section#events ul li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
+}
+
+section#tools-resources ul li:hover, section#events ul li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+section:nth-child(1) {
+    animation-delay: 0s;
+}
+
+section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+section:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+section:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+section:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+section:nth-child(6) {
+    animation-delay: 1s;
+}
+
+section:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+section:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+section:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+section:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}

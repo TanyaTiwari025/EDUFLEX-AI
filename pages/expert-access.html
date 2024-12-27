@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expert Access</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/expert.css">
 </head>
 <body>
     <header>
@@ -22,12 +21,179 @@
             </ul>
         </nav>
     </header>
+    
     <main>
-        <h1>Expert Access</h1>
-        <p>Welcome to the Expert Access page. This section will provide you with the necessary resources and guidance.</p>
+        <section id="expert-access-header">
+            <h1>Expert Access</h1>
+            <p>Welcome to the Expert Access page. This section will provide you with the necessary resources and guidance to connect with top industry experts for career development.</p>
+            <nav>
+                <ul>
+                    <li><a href="#expert-profiles">Expert Profiles</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#services">Services Offered</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="expert-profiles">
+            <h2>Expert Profiles</h2>
+            <div class="expert-list">
+                <!-- Expert 1 -->
+                <div class="expert-card">
+                    <img src="expert-photo1.jpg" alt="Expert Name">
+                    <h3>Expert Name</h3>
+                    <p>Expert Description</p>
+                    <button>Request Consultation</button>
+                </div>
+                <!-- Expert 2 -->
+                <div class="expert-card">
+                    <img src="expert-photo2.jpg" alt="Expert Name">
+                    <h3>Expert Name</h3>
+                    <p>Expert Description</p>
+                    <button>Request Consultation</button>
+                </div>
+                <!-- Repeat for other experts -->
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Expert Services Offered</h2>
+            <ul>
+                <li>
+                    <strong>1-on-1 Consultation:</strong> Personalized sessions with industry experts to address your specific career and academic queries.
+                </li>
+                <li>
+                    <strong>Resume Reviews:</strong> Detailed feedback and improvement tips to make your resume stand out in job applications.
+                </li>
+                <li>
+                    <strong>Career Guidance:</strong> Expert advice to help you navigate career paths, explore options, and align your goals.
+                </li>
+                <li>
+                    <strong>Workshops:</strong> Hands-on training sessions on trending topics and skills in the industry.
+                </li>
+                <li>
+                    <strong>Mock Interviews:</strong> Practice interviews with experts to boost your confidence and refine your responses.
+                </li>
+                <li>
+                    <strong>Skill Assessment:</strong> Identify your strengths and areas for improvement with tailored feedback and resources.
+                </li>
+            </ul>
+        </section>
+        
+
+        <section id="testimonials">
+            <h2>User Testimonials</h2>
+            <div class="testimonial">
+                <p>"The expert's advice helped me land my dream job! I was able to improve my skills in ways I never thought possible. Highly recommended!"</p>
+                <p>- Riya Sharma, Software Engineer</p>
+            </div>
+        
+            <div class="testimonial">
+                <p>"The mentorship I received was invaluable for my career. It guided me through complex concepts and made me feel confident in my decisions."</p>
+                <p>- Ayaan Patel, Data Scientist</p>
+            </div>
+        
+            <div class="testimonial">
+                <p>"The personalized sessions tailored to my needs made all the difference. I gained insights into career paths I hadn’t considered before!"</p>
+                <p>- Sarah Khan, Digital Marketer</p>
+            </div>
+        
+            <div class="testimonial">
+                <p>"Thanks to the experts, I gained clarity about my career goals and learned practical tips for succeeding in my field."</p>
+                <p>- Rahul Verma, Web Developer</p>
+            </div>
+        </section>
+        
+
+        <section id="access-subscription">
+            <h2>Get Access to Experts</h2>
+            <p>Choose a plan that suits your needs and start your learning journey.</p>
+            
+            <div class="plans">
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <p>1 Consultation per month</p>
+                    <p>Price: $29/month</p>
+                    <button onclick="subscribe('Basic')">Subscribe Now</button>
+                </div>
+        
+                <div class="plan">
+                    <h3>Premium Plan</h3>
+                    <p>5 Consultations per month</p>
+                    <p>Price: $99/month</p>
+                    <button onclick="subscribe('Premium')">Subscribe Now</button>
+                </div>
+        
+                <div class="plan">
+                    <h3>Elite Plan</h3>
+                    <p>Unlimited Consultations</p>
+                    <p>Price: $199/month</p>
+                    <button onclick="subscribe('Elite')">Subscribe Now</button>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+        
+            <div class="faq-item">
+                <h3>How do I book a session with an expert?</h3>
+                <p>To book a session, simply select the expert from the list on the "Expert Profiles" page. After choosing the expert, click on "Book Session," and follow the instructions to schedule a time that works for you.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>What is the pricing for expert consultations?</h3>
+                <p>The pricing for consultations varies depending on the expert's experience and the type of consultation. You can find detailed pricing information on the expert's profile page.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Can I have a free trial session?</h3>
+                <p>Yes, many experts offer a free introductory session to understand your needs. Check the expert’s profile to see if they are offering a free consultation.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Do the experts provide career guidance?</h3>
+                <p>Yes, our experts provide comprehensive career guidance including industry insights, resume reviews, job search strategies, and personalized advice based on your goals.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>How can I contact an expert for further queries?</h3>
+                <p>If you have any specific questions, you can contact the expert through the messaging feature on their profile. Alternatively, you can reach out via email or social media links provided on their page.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Are the consultations available remotely?</h3>
+                <p>Yes, all expert consultations are conducted remotely via video call, ensuring you can access guidance from anywhere in the world.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Can I reschedule a session if I miss it?</h3>
+                <p>If you are unable to attend a scheduled session, you can reschedule it by contacting the expert directly through the platform. Be sure to notify them in advance to avoid any cancellation fees.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Do experts specialize in specific subjects or fields?</h3>
+                <p>Yes, each expert specializes in a particular area such as career development, technical skills, or soft skills. You can filter experts by their area of expertise on the "Expert Profiles" page.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Is there a money-back guarantee for expert consultations?</h3>
+                <p>Many experts offer a satisfaction guarantee. If you are not satisfied with the consultation, you can request a refund or reschedule. Check individual expert profiles for more details.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>How do I provide feedback on a session?</h3>
+                <p>After your session, you will have the option to leave a review and rate your experience. Your feedback helps us improve the services offered on this platform.</p>
+            </div>
+        </section>
+        
     </main>
+
     <footer>
         <p>&copy; 2024 Educational Website</p>
     </footer>
+
+    <script src="../js/expert.js"></script>
 </body>
 </html>

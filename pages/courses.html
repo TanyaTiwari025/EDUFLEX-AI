@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/courses.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="horizontal-nav">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="career-path.html">Career Path</a></li>
-                <li><a href="courses.html">Courses</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
                 <li><a href="notes.html">Notes</a></li>
                 <li><a href="placement-guidance.html">Placement Guidance</a></li>
                 <li><a href="networking.html">Networking</a></li>
@@ -22,12 +21,91 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Courses</h1>
-        <p>Welcome to the Courses page. This section will provide you with the necessary resources and guidance.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Educational Website</p>
-    </footer>
+    
+    <div class="container">
+        <!-- Introduction Section -->
+        <header class="page-header">
+            <h1>Courses</h1>
+            <p>Explore a wide range of courses designed to advance your skills and career prospects. Learn from industry experts and unlock your potential today!</p>
+        </header>
+
+        <!-- Categories Section -->
+        <section class="course-categories">
+            <h2>Course Categories</h2>
+            <div class="categories">
+                <div class="category-card">Programming Languages</div>
+                <div class="category-card">Web Development</div>
+                <div class="category-card">Data Science & AI</div>
+                <div class="category-card">Cloud Computing</div>
+                <div class="category-card">Cybersecurity</div>
+                <div class="category-card">DevOps & Agile</div>
+                <div class="category-card">Competitive Programming</div>
+                <div class="category-card">Internship Preparation</div>
+            </div>
+        </section>
+
+        <!-- Featured Courses Section -->
+        <section class="featured-courses">
+            <h2>Featured Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Web Development</h3>
+                    <p>Master HTML, CSS, JavaScript, React, and backend technologies.</p>
+                    <span>Beginner - Advanced</span>
+                    <a href="#">Enroll Now</a>
+                </div>
+                <div class="course-card">
+                    <h3>Data Science</h3>
+                    <p>Learn Python, machine learning, and data visualization.</p>
+                    <span>Intermediate</span>
+                    <a href="#">Enroll Now</a>
+                </div>
+                <div class="course-card">
+                    <h3>Cloud Computing</h3>
+                    <p>Explore AWS, Azure, and Google Cloud fundamentals.</p>
+                    <span>Beginner</span>
+                    <a href="#">Enroll Now</a>
+                </div>
+                <div class="course-card">
+                    <h3>AI & Machine Learning</h3>
+                    <p>Understand AI tools, neural networks, and TensorFlow.</p>
+                    <span>Advanced</span>
+                    <a href="#">Enroll Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>What Our Students Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"This platform helped me land my dream job as a web developer!"</p>
+                    <span>- Ananya S.</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The AI & Machine Learning course was amazing. Highly recommended!"</p>
+                    <span>- Rohan M.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>Are these courses free?</h4>
+                <p>Some courses are free, while others may require a fee for advanced features or certifications.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do I get a certificate?</h4>
+                <p>Yes, upon completion of the course and passing the assessment, you receive a certificate.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 EDUFLEX AI. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
