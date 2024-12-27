@@ -1,98 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | EDUFLEXAI</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header>
-        <div class="logo" id="logo">EDUFLEXAI</div>
-        <nav>
-            <a href="../pages/login.html">Login</a>
-            <a href="../pages/signup.html">Signup</a>
-        </nav>
-    </header>
-
+<div class="dashboard-container">
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="#">Career Path</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Notes</a></li>
-            <li><a href="#">Networking</a></li>
-            <li><a href="#">Placement Guidance</a></li>
-            <li><a href="#">Higher Studies Guidance</a></li>
-            <li><a href="#">Skill Development</a></li>
-            <li><a href="#">Expert Access</a></li>
-            <li><a href="#">Rating & Feedback</a></li>
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <h2>EDUFLEXAI</h2>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="../Homepage/index.html">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#assignments">Assignments</a></li>
+            <li><a href="#notes">Your Notes</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#logout">Logout</a></li>
+            <link rel="stylesheet" href="../css/dashboard.css">
         </ul>
     </div>
 
     <!-- Main Content -->
-    <main>
-        <h1>Dashboard</h1>
+    <div class="main-content">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>Welcome Back, Tanya!</h1>
+            <p>Your learning journey continues...</p>
+        </div>
 
-        <!-- Blocks with content -->
-        <div class="block">
-            <h2>Educational Resources</h2>
+        <!-- Statistics Cards -->
+        <div class="stats-cards">
+            <div class="card">
+                <h3>Courses</h3>
+                <p>15 Courses</p>
+            </div>
+            <div class="card">
+                <h3>Assignments</h3>
+                <p>5 Pending</p>
+            </div>
+            <div class="card">
+                <h3>Notes</h3>
+                <p>20 Notes Uploaded</p>
+            </div>
+            <div class="card">
+                <h3>Notifications</h3>
+                <p>3 New</p>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+            <h3>Recent Activity</h3>
             <ul>
-                <li><a href="#">Career Path</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Notes</a></li>
+                <li>Completed "Machine Learning Basics" Course</li>
+                <li>Uploaded Notes on "Web Development"</li>
+                <li>Updated Profile Picture</li>
             </ul>
         </div>
 
-        <div class="block">
-            <h2>Networking</h2>
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <h3>Quick Links</h3>
             <ul>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Professional Groups</a></li>
+                <li><a href="../pages/courses.html">Explore Courses</a></li>
+                <li><a href="../pages/notes.html">Your Notes</a></li>
+                <li><a href="../pages/placement-guidance.html">Placement Guidance</a></li>
+                <li><a href="../pages/networking.html" class="btn primary-btn">Networking</a></li>
+                <li><a href="../pages/expert-access.html" class="btn primary-btn">Expert Access</a></li>
+                <li><a href="../pages/career-path.html" class="btn primary-btn">Plan Your Career</a></li>
             </ul>
         </div>
-
-        <div class="block">
-            <h2>Placement Guidance</h2>
-            <ul>
-                <li><a href="#">Resume Building</a></li>
-                <li><a href="#">Mock Interviews</a></li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Higher Studies Guidance</h2>
-            <ul>
-                <li><a href="#">GRE/GMAT</a></li>
-                <li><a href="#">MS/PhD Programs</a></li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Skill Development</h2>
-            <ul>
-                <li><a href="#">Online Courses</a></li>
-                <li><a href="#">Workshops</a></li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Expert Access</h2>
-            <ul>
-                <li><a href="#">Mentor Sessions</a></li>
-                <li><a href="#">Consultations</a></li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Rating & Feedback</h2>
-            <ul>
-                <li><a href="#">Submit Feedback</a></li>
-                <li><a href="#">Rate the Website</a></li>
-            </ul>
-        </div>
-    </main>
-
-    <script src="../js/auth.js"></script>
-</body>
-</html>
+    </div>
+</div>
