@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notes.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Homepage/index.html">Home</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="career-path.html">Career Path</a></li>
                 <li><a href="courses.html">Courses</a></li>
@@ -22,12 +22,162 @@
             </ul>
         </nav>
     </header>
-    <main>
+
+    <!-- Introduction Section -->
+    <section class="intro">
         <h1>Notes</h1>
-        <p>Welcome to the Notes page. This section will provide you with the necessary resources and guidance.</p>
-    </main>
+        <p>Access curated notes across various topics, designed to make your learning journey smoother. Download or view notes directly for seamless study sessions.</p>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Categories</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Programming</h3>
+                <p>Explore notes on Python, Java, C++, and more.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Data Structures and Algorithms</h3>
+                <p>Master the fundamentals and advanced concepts of DSA.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Database Management Systems</h3>
+                <p>Understand databases with comprehensive DBMS notes.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Operating Systems</h3>
+                <p>Learn the core concepts of OS like scheduling and memory management.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Machine Learning</h3>
+                <p>Get started with ML basics and advanced algorithms.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, React, and more – all in one place.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Cybersecurity</h3>
+                <p>Understand ethical hacking, encryption, and securing systems.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Mathematics for Computing</h3>
+                <p>Brush up on discrete mathematics, calculus, and linear algebra.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>General Aptitude</h3>
+                <p>Practice quantitative and logical reasoning questions.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Soft Skills</h3>
+                <p>Improve your communication, teamwork, and leadership skills.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Video Notes</h3>
+                <p>Watch and learn through video-based lessons and notes.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Placement Preparation</h3>
+                <p>Prepare for interviews, coding rounds, and group discussions.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Downloadable Notes</h3>
+                <p>Get notes in PDF, PPT, or Word formats for offline study.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Collaborative Notes</h3>
+                <p>Access user-shared notes and contribute your own.</p>
+                <a href="#">View Notes</a>
+            </div>
+            <div class="card">
+                <h3>Expert Notes</h3>
+                <p>Learn from professor-verified notes on advanced topics.</p>
+                <a href="#">View Notes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter">
+        <h2>Find Your Notes</h2>
+        <input type="text" placeholder="Search notes by keyword..." id="searchBar">
+        <div class="filters">
+            <select id="subjectFilter">
+                <option value="">Filter by Subject</option>
+                <option value="programming">Programming</option>
+                <option value="math">Mathematics</option>
+                <option value="ai">Artificial Intelligence</option>
+            </select>
+            <select id="difficultyFilter">
+                <option value="">Filter by Difficulty</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <select id="yearFilter">
+                <option value="">Filter by Year/Semester</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Interactive Notes Viewer -->
+    <section class="notes-viewer">
+        <h2>Interactive Notes Viewer</h2>
+        <iframe src="sample-notes.pdf" frameborder="0" class="viewer"></iframe>
+        <div class="viewer-controls">
+            <button>Zoom In</button>
+            <button>Zoom Out</button>
+            <button>Bookmark</button>
+        </div>
+    </section>
+
+    <!-- Collaborative Notes -->
+    <section class="collaborative-notes">
+        <h2>Collaborative Notes</h2>
+        <p>Upload your notes to help peers. Rate and review shared notes!</p>
+        <form>
+            <input type="file" name="uploadNotes">
+            <textarea placeholder="Add a description for your notes"></textarea>
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Students Say</h2>
+        <div class="testimonial">
+            <p>"The notes helped me ace my exams!" - Ankit</p>
+        </div>
+        <div class="testimonial">
+            <p>"A great resource for quick revisions!" - Priya</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Educational Website</p>
+        <h3>FAQs</h3>
+        <p>How to download notes? Click on the download button for your preferred format.</p>
+        <p>Are the notes updated? Yes, we regularly update them based on feedback.</p>
+        <p>Who creates these notes? Experts and top-performing students contribute.</p>
+        <p>&copy; 2024 EDUFLEX AI. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
