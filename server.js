@@ -6,6 +6,15 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
+const router = express.Router();
+
+router.post('/', (req, res) => {
+    // Your AI functionality here
+    res.json({ message: 'AI Response' });
+});
+
+module.exports = router;
+
 // Connect to MongoDB
 connectDB();
 
@@ -15,6 +24,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 // Serve static files (HTML)
 app.use(express.static(__dirname));
+
+// Use AI routes
+//app.use('/api/ai', aiRoutes);
 
 // Use signup routes
 app.use('/', signupRoutes);
