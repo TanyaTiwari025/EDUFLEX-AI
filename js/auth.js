@@ -41,21 +41,37 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Handle login form submission
     if (loginForm) {
-        loginForm.addEventListener('submit',  function(e) {
+        loginForm.addEventListener('submit',  async function(e) {
             e.preventDefault();
-            const email = loginForm.email.value;
-            const password = loginForm.password.value;
-
-          
+            // const email = loginForm.email.value;
+            // const password = loginForm.password.value;
             // Check stored user details
-            const storedEmail = localStorage.getItem('email');
-            const storedPassword = localStorage.getItem('password');
+            // const storedEmail = localStorage.getItem('email');
+            // const storedPassword = localStorage.getItem('password');
 
             if (email === storedEmail && password === storedPassword) {
                 alert('Login successful!');
                 window.location.href = '../pages/dashboard.html'; // Redirect to dashboard
             } else {
                 alert('Invalid email or password. Please try again.');
+            }
+
+
+            try{
+                const response = await fetch('http://localhost:3000/login',{
+                   method:'POST',
+                   headers: {
+                    'Content-Type': 'application/json'
+                     },
+                    body: JSON.stringify(data)
+                     
+                   
+                });
+                if(response.ok){
+
+                }
+            }catch(err){
+                return resizeBy.status(400).json({error:"Error in login"})
             }
         });
     }
