@@ -5,15 +5,15 @@ const signupRoutes = require('./backend/routes/signuproute');
 const cors = require('cors');
 const app = express();
 const PORT = 3000;
+const ai = require('./backend/routes/ai')
 
-const router = express.Router();
 
-router.post('/', (req, res) => {
-    // Your AI functionality here
-    res.json({ message: 'AI Response' });
-});
+// router.post('/', (req, res) => {
+//     // Your AI functionality here
+//     res.json({ message: 'AI Response' });
+// });
 
-module.exports = router;
+// module.exports = router;
 
 // Connect to MongoDB
 connectDB();
@@ -26,7 +26,7 @@ app.use(cors());
 app.use(express.static(__dirname));
 
 // Use AI routes
-//app.use('/api/ai', aiRoutes);
+app.use('/', ai);
 
 // Use signup routes
 app.use('/', signupRoutes);
