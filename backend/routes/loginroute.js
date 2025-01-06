@@ -12,12 +12,16 @@ router.post('/login',async (req,res)=>{
     if(!user){
         return res.status(401).json({error:"User not found...kindly register first"});
     }
-    if(!await user.comparePasssword(password)){
+    if(!await user.comparePassword(password)){
         return res.status(401).json({error:"Invalid Password or Email"});
     }
 
 
     return res.status(200).json({message:"logged in"})
     
-})
+});
+
+
+module.exports = router
+
 

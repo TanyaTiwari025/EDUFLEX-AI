@@ -43,18 +43,20 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (loginForm) {
         loginForm.addEventListener('submit',  async function(e) {
             e.preventDefault();
-            // const email = loginForm.email.value;
-            // const password = loginForm.password.value;
-            // Check stored user details
-            // const storedEmail = localStorage.getItem('email');
-            // const storedPassword = localStorage.getItem('password');
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
 
-            if (email === storedEmail && password === storedPassword) {
-                alert('Login successful!');
-                window.location.href = '../pages/dashboard.html'; // Redirect to dashboard
-            } else {
-                alert('Invalid email or password. Please try again.');
-            }
+
+            if (email && password) {
+            const data = { email, password };
+
+
+            // if (email   && password) {
+            //     alert('Login successful!');
+            //     window.location.href = '../pages/dashboard.html'; // Redirect to dashboard
+            // } else {
+            //     alert('Invalid email or password. Please try again.');
+            // }
 
 
             try{
@@ -67,12 +69,22 @@ document.addEventListener('DOMContentLoaded', async function() {
                      
                    
                 });
-                if(response.ok){
-
+                if (response.ok) {
+                    const responseData = await response.json();
+                    alert(responseData.message); // Display success message
+                    window.location.href = '../pages/dashboard.html'; // Redirect to dashboard
+                } else {
+                    const errorData = await response.json();
+                    alert(errorData.error || 'Login failed. Please try again.');
                 }
-            }catch(err){
-                return resizeBy.status(400).json({error:"Error in login"})
+            } catch (err) {
+                console.error('Error during login:', err);
+                alert('An error occurred while logging in. Please try again.');
             }
+        } 
+        else {
+            alert('Invalid email or password. Please try again.');
+        }    
         });
     }
 });

@@ -6,14 +6,7 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 const ai = require('./backend/routes/ai')
-
-
-// router.post('/', (req, res) => {
-//     // Your AI functionality here
-//     res.json({ message: 'AI Response' });
-// });
-
-// module.exports = router;
+const loginRoutes = require('./backend/routes/loginroute');
 
 // Connect to MongoDB
 connectDB();
@@ -30,7 +23,7 @@ app.use('/', ai);
 
 // Use signup routes
 app.use('/', signupRoutes);
-
+app.use('/',loginRoutes);
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
