@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #00bcd4, #ff4081);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Course Cards */
+.course-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px 10%;
+}
+
+.course-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-card a {
+    display: block;
+    padding: 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+.course-card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.course-card p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Resources Section */
+.resources {
+    padding: 40px 10%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.05));
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Course List */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.course {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.course h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.course a {
+    display: inline-block;
+    font-weight: bold;
+    color: #ff4081;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.course a:hover {
+    color: #00bcd4;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #00bcd4, #ff4081);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #ff4081, #00bcd4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-cards {
+        padding: 20px 5%;
+    }
+
+    .resources {
+        padding: 20px 5%;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -9,8 +9,9 @@
     "express": "^4.21.1",
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.0",
+    "mysql": "^2.18.1",
     "node-fetch": "^3.3.2",
-    "nodemon": "^3.1.7",
+    "nodemon": "^3.1.9",
     "openai": "^4.77.0"
   }
 }

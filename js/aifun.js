@@ -9,6 +9,15 @@ document.getElementById('ai-submit').addEventListener('click', async () => {
     const responseDiv = document.getElementById('ai-response');
     responseDiv.innerHTML = 'Thinking...';
 
+    chatbotButton.addEventListener('click', () => {
+        chatbotModal.style.display = 'flex';
+    });
+
+    closeButton.addEventListener('click', () => {
+        chatbotModal.style.display = 'none';
+    });
+
+
     try {
         const response = await fetch('http://localhost:3000/ai', {
             method: 'POST',

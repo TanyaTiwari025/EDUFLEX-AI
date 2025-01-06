@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+/* Roadmap Details Section */
+.roadmap-details {
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 900px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.roadmap-details h2 {
+    font-size: 2.2em;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.roadmap-details p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin: 15px 0;
+    color: #555;
+}
+
+/* Key Points or Steps */
+.roadmap-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.roadmap-details ul li {
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.roadmap-details ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: linear-gradient(to right, #dc3545, #fd7e14);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.back-button:hover {
+    background: linear-gradient(to right, #fd7e14, #ffc107);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

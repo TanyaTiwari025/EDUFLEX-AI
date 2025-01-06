@@ -35,3 +35,10 @@ app.use('/', signupRoutes);
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+const db = mysql.createConnection({
+    host: "localhost", // Use your database host
+    user: "root", // Your MySQL username
+    password: "your_password", // Your MySQL password
+    database: "eduflexai", // Your database name
+});
