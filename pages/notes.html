@@ -153,8 +153,8 @@
     <section class="collaborative-notes">
         <h2>Collaborative Notes</h2>
         <p>Upload your notes to help peers. Rate and review shared notes!</p>
-        <form>
-            <input type="file" name="uploadNotes">
+        <form action="http://localhost:3000/upload"  method="POST" enctype="multipart/form-data">
+            <input type="file" name="pdf" accept=".pdf" required >
             <textarea placeholder="Add a description for your notes"></textarea>
             <button type="submit">Upload</button>
         </form>
