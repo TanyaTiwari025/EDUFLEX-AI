@@ -4,8 +4,8 @@ require('dotenv').config();
 const connectDB = async () => {
     try {
         await mongoose.connect("mongodb://localhost:27017/Eduflex",{ 
-            useNewUrlParser: true, 
-            useUnifiedTopology: true 
+           // useNewUrlParser: true, 
+           // useUnifiedTopology: true 
         });
         console.log('MongoDB connected');
     } catch (err) {

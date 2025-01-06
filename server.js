@@ -7,6 +7,7 @@ const app = express();
 const PORT = 3000;
 const ai = require('./backend/routes/ai')
 const loginRoutes = require('./backend/routes/loginroute');
+const uploadRoutes = require('./backend/routes/uploadRoutes')
 
 // Connect to MongoDB
 connectDB();
@@ -24,6 +25,7 @@ app.use('/', ai);
 // Use signup routes
 app.use('/', signupRoutes);
 app.use('/',loginRoutes);
+app.use('/',uploadRoutes);
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
