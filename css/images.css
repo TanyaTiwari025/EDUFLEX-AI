@@ -1,0 +1,8 @@
+.expert-card img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures image fits without distortion */
+    display: block;
+    margin: 0 auto 10px; /* Centers image and adds spacing */
+}

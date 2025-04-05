@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Registration</title>
+    <link rel="stylesheet" href="../css/expert.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Register as an Expert</h2>
+        <form id="expertForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="expertise">Expertise:</label>
+            <input type="text" id="expertise" name="expertise" required>
+
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p id="responseMessage"></p>
+    </div>
+
+    <script src="../pages/expertRegister.js"></script> <!-- ✅ Updated path for JavaScript file -->
+</body>
+</html>

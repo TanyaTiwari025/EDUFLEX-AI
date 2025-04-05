@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expert Access</title>
     <link rel="stylesheet" href="../css/expert.css">
+    <link rel="stylesheet" href="../css/images.css">
 </head>
 <body>
     <header>
@@ -19,9 +20,32 @@
                 <li><a href="networking.html">Networking</a></li>
                 <li><a href="expert-access.html">Expert Access</a></li>
             </ul>
+            
         </nav>
     </header>
+    <!-- Expert Registration Form -->
+    <section id="expert-registration">
+        <h2>Register as an Expert</h2>
+        <form id="expert-form">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
     
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="expertise">Expertise:</label>
+            <input type="text" id="expertise" name="expertise" required>
+    
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/your-profile" required>
+    
+            <button type="submit">Register</button>
+        </form>
+    
+        <p id="registration-message"></p>
+    </section>
+    
+
     <main>
         <section id="expert-access-header">
             <h1>Expert Access</h1>
@@ -38,22 +62,191 @@
         <section id="expert-profiles">
             <h2>Expert Profiles</h2>
             <div class="expert-list">
-                <!-- Expert 1 -->
+
                 <div class="expert-card">
-                    <img src="expert-photo1.jpg" alt="Expert Name">
-                    <h3>Expert Name</h3>
-                    <p>Expert Description</p>
-                    <button>Request Consultation</button>
+                    <img src="../images/tanya.jpg" alt="Tanya Tiwari">
+                    <h3>Tanya Tiwari</h3>
+                    <p>Currently pursuing B.Tech from Galgotias University. Holding offers from HCL and Capgemini. Expert in Data Analysis, providing insights into data-driven decision-making.</p>
+                    <p>Connect on <a href="https://www.linkedin.com/in/tanya-tiwari011" target="_blank">LinkedIn</a></p>
+                    
+                    <button class="request-btn" data-expert="Tanya Tiwari">Request Consultation</button>
+                
+                    <!-- Services Dropdown -->
+                    <div class="expert-services">
+                        <ul>
+                            <li>Data Analytics Consultation</li>
+                            <li>Machine Learning Model Review</li>
+                            <li>Career Guidance in Data Science</li>
+                            <li>Resume & LinkedIn Profile Review</li>
+                            <li>Technical Interview Preparation</li>
+                            <li>SQL & Python Training</li>
+                        </ul>
+                    </div>
                 </div>
+                
+
                 <!-- Expert 2 -->
                 <div class="expert-card">
-                    <img src="expert-photo2.jpg" alt="Expert Name">
-                    <h3>Expert Name</h3>
-                    <p>Expert Description</p>
-                    <button>Request Consultation</button>
+                    <img src="../images/sakshi.jpg" alt="Sakshi Singh">
+                    <h3>Sakshi Singh</h3>
+                    <p>Currently pursuing B.Tech CSE from Galgotias University. Holding an offer from Orange Business Tech. Expert in Networking, providing guidance on network security and administration.</p>
+                    <p>Connect on <a href="https://www.linkedin.com/in/sakshi-singh-suryavanshi-37600a22a/" target="_blank">LinkedIn</a></p>
+                
+                    <button class="request-btn" data-expert="Sakshi Singh">Request Consultation</button>
+                
+                    <!-- Services Dropdown -->
+                    <div class="expert-services">
+                        <ul>
+                            <li>Networking Fundamentals</li>
+                            <li>Network Security & Firewalls</li>
+                            <li>Cloud Networking Consultation</li>
+                            <li>Resume & LinkedIn Profile Review</li>
+                            <li>Technical Interview Preparation</li>
+                            <li>Cisco Networking Training</li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Repeat for other experts -->
+
+                <!--Expert 3-->
+                <div class="expert-card">
+                    <img src="../images/aman.jpg" alt="Aman Yadav">
+                    <h3>Aman Yadav</h3>
+                    <p>Currently pursuing B.Tech CSE from GNIOT. Ranked 4th in the Campus Coding Event. Expert in C, C++, and JavaScript, specializing in competitive programming and software development.</p>
+                    <p>Connect on <a href="https://www.linkedin.com/in/aman-yadav-b43b17236/" target="_blank">LinkedIn</a></p>
+                
+                    <button class="request-btn" data-expert="Aman Yadav">Request Consultation</button>
+                
+                    <!-- Services Dropdown -->
+                    <div class="expert-services">
+                        <ul>
+                            <li>C & C++ Programming Consultation</li>
+                            <li>JavaScript & Web Development</li>
+                            <li>Competitive Coding Strategies</li>
+                            <li>Resume & LinkedIn Profile Review</li>
+                            <li>Technical Interview Preparation</li>
+                            <li>Data Structures & Algorithms Training</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Expert 4-->
+                <div class="expert-card">
+                    <img src="../images/ruchi.jpg" alt="Ruchi Rajput">
+                    <h3>Ruchi Rajput</h3>
+                    <p>Currently pursuing B.Tech CSE from Galgotias University. Expert in C++ and Frontend Development, specializing in UI/UX and web application design.</p>
+                    <p>Connect on <a href="https://www.linkedin.com/in/ruchi-rajput-bly/" target="_blank">LinkedIn</a></p>
+                    <button class="request-btn" data-expert="Ruchi Rajput">Request Consultation</button>
+                
+                    <!-- Services Dropdown -->
+                    <div class="expert-services">
+                        <ul>
+                            <li>Frontend Development Consultation</li>
+                            <li>C++ Programming Guidance</li>
+                            <li>UI/UX Design Fundamentals</li>
+                            <li>Resume & LinkedIn Profile Review</li>
+                            <li>Technical Interview Preparation</li>
+                            <li>Web Development Best Practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Expert 5-->
+                <div class="expert-card">
+                    <img src="../images/siddhant.jpg" alt="Siddhant Singh">
+                    <h3>Siddhant Singh</h3>
+                    <p>Currently pursuing B.Tech CSE from Galgotias University. Holding an offer from EY. Expert in Python, specializing in automation, data analysis, and backend development.</p>
+                    <p>Connect on <a href="https://www.linkedin.com/in/thakur-siddhant-singh-b7932025b/" target="_blank">LinkedIn</a></p>
+                
+                    <button class="request-btn" data-expert="Siddhant Singh">Request Consultation</button>
+                
+                    <!-- Services Dropdown -->
+                    <div class="expert-services">
+                        <ul>
+                            <li>Python Programming Consultation</li>
+                            <li>Data Automation & Scripting</li>
+                            <li>Career Guidance in Software Development</li>
+                            <li>Resume & LinkedIn Profile Review</li>
+                            <li>Technical Interview Preparation</li>
+                            <li>Machine Learning & AI Basics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <img src="../images/saurabh.jpg" alt="Saurabh Kumar Jaiswal">
+                    <h3>Saurabh Kumar Jaiswal</h3>
+                    <p>Currently pursuing B.Tech CSE from Galgotias University. Holding an offer from LTI Mindtree. Expert in Cloud Computing and C++.</p>
+                    <p>Connect on <a href="https://www.linkedin.com/in/saurabh-kumar-jaiswal-3a4801291/" target="_blank">LinkedIn</a></p>
+                    <button class="request-btn" data-expert="Saurabh Kumar Jaiswal">Request Consultation</button>
+                    <div class="expert-services">
+                        <ul>
+                            <li>Cloud Computing Consultation</li>
+                            <li>C++ Programming Guidance</li>
+                            <li>Career Advice in IT Industry</li>
+                            <li>Resume & LinkedIn Profile Review</li>
+                            <li>Mock Technical Interviews</li>
+                            <li>Project Guidance in Cloud</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="expert-card">
+                    <img src="../images/vikram.jpg" alt="Vikram Vishal Singh">
+                    <h3>Vikram Vishal Singh</h3>
+                    <p>Currently pursuing B.Tech CSE from Galgotias University. Expert in Python, C++, and Web Development.</p>
+                    <p>Connect on <a href="https://www.linkedin.com/in/vikram-vishal-singh-803693251/" target="_blank">LinkedIn</a></p>
+                    <button class="request-btn" data-expert="Vikram Vishal Singh">Request Consultation</button>
+                    <div class="expert-services">
+                        <ul>
+                            <li>Python Programming Consultation</li>
+                            <li>C++ Development Guidance</li>
+                            <li>Web Development Coaching</li>
+                            <li>Career Advice in Software Engineering</li>
+                            <li>Technical Interview Preparation</li>
+                            <li>Portfolio & Resume Review</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="expert-card">
+                    <img src="../images/ankur.jpg" alt="Ankur Shrivastava">
+                    <h3>Ankur Shrivastava</h3>
+                    <p>Currently pursuing B.Tech CSE from Galgotias University. Research Intern at IIT Mandi.</p>
+                    <p>Connect on <a href="https://www.linkedin.com/in/ankur-srivastava2907/" target="_blank">LinkedIn</a></p>
+                    <button class="request-btn" data-expert="Ankur Shrivastava">Request Consultation</button>
+                    <div class="expert-services">
+                        <ul>
+                            <li>Research Guidance</li>
+                            <li>Machine Learning & AI Consultation</li>
+                            <li>Python for Research Applications</li>
+                            <li>Technical Paper Writing Assistance</li>
+                            <li>Mock Research Interviews</li>
+                            <li>Resume & Research Portfolio Review</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+            <!-- Consultation Form (Initially Hidden) -->
+            <div id="consultation-form" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeConsultationForm()">&times;</span>
+                    <h2 id="consultation-title">Request Consultation</h2>
+            
+                    <form id="consultationRequestForm">
+                        <label for="student-name">Your Name:</label>
+                        <input type="text" id="student-name" name="studentName" required>
+            
+                        <label for="student-email">Your Email:</label>
+                        <input type="email" id="student-email" name="studentEmail" required>
+            
+                        <label for="service">Select Service:</label>
+                        <select id="service" name="service" required></select>
+            
+                        <button type="submit">Send Request</button>
+                    </form>
+                </div>
+            </div>
+
         </section>
 
         <section id="services">
@@ -195,5 +388,223 @@
     </footer>
 
     <script src="../js/expert.js"></script>
+
+    <!-- Floating Chatbot Button -->
+<div id="chatbot-button" class="chatbot-button">
+    <img src="chatbot-icon.png" alt="Ask EDUFLEXAI">
+</div>
+
+<!-- Chatbot Modal -->
+<div id="chatbot-modal" class="chatbot-modal">
+    <div class="chatbot-content">
+        <h2>Ask EDUFLEXAI</h2>
+        <textarea id="ai-input" placeholder="Type your question..."></textarea>
+        <button id="ai-submit">Ask AI</button>
+        <div id="ai-response"></div>
+        <button id="close-chatbot">Close</button>
+    </div>
+</div>
+
+<!-- Style for the Floating Chatbot -->
+<style>
+    #chatbot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007BFF;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #chatbot-button img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chatbot-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chatbot-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 400px;
+    }
+
+    #ai-input {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    #ai-submit {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #ai-response {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    #close-chatbot {
+        margin-top: 10px;
+        background-color: #FF6347;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+    <!--style for dropdown services-->
+<style>
+    .expert-services {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+.expert-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expert-services ul li {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+</style>
+
+<!-- JavaScript to Control Chatbot Modal -->
+<script>
+    const chatbotButton = document.getElementById('chatbot-button');
+    const chatbotModal = document.getElementById('chatbot-modal');
+    const closeButton = document.getElementById('close-chatbot');
+
+    chatbotButton.addEventListener('click', () => {
+        chatbotModal.style.display = 'flex';
+    });
+
+    closeButton.addEventListener('click', () => {
+        chatbotModal.style.display = 'none';
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.expert-card').forEach(card => {
+    const button = card.querySelector('.request-btn');
+    const services = card.querySelector('.expert-services');
+
+    button.addEventListener('click', () => {
+        const isActive = services.style.display === 'block';
+        
+        // Hide all other open dropdowns
+        document.querySelectorAll('.expert-services').forEach(service => {
+            service.style.display = 'none';
+        });
+
+        // Toggle only the clicked expert's services dropdown
+        services.style.display = isActive ? 'none' : 'block';
+    });
+});
+
+</script>
+    <!---dynamicallyfunction --->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const requestButtons = document.querySelectorAll(".request-btn");
+    const consultationForm = document.getElementById("consultation-form");
+    const serviceDropdown = document.getElementById("service");
+    const consultationTitle = document.getElementById("consultation-title");
+    const form = document.getElementById("consultationRequestForm");
+
+    requestButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const expertCard = this.closest(".expert-card");
+            const expertName = expertCard.querySelector("h3").innerText;
+            const services = expertCard.querySelectorAll(".expert-services ul li");
+
+            // Update form title
+            consultationTitle.innerText = `Request Consultation with ${expertName}`;
+
+            // Store expert name in form
+            form.setAttribute("data-expert", expertName);
+
+            // Clear existing dropdown options
+            serviceDropdown.innerHTML = "";
+
+            // Populate dropdown with expert's services
+            services.forEach(service => {
+                const option = document.createElement("option");
+                option.textContent = service.innerText;
+                serviceDropdown.appendChild(option);
+            });
+
+            // Show form
+            consultationForm.style.display = "block";
+        });
+    });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const studentName = document.getElementById("student-name").value;
+        const studentEmail = document.getElementById("student-email").value;
+        const selectedService = document.getElementById("service").value;
+        const expertName = form.getAttribute("data-expert");
+
+        // Send data to backend
+        fetch("/send-consultation-request", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                expertName,
+                studentName,
+                studentEmail,
+                selectedService
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            closeConsultationForm();
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Failed to send request. Please try again.");
+        });
+    });
+});
+
+// Function to close the form
+function closeConsultationForm() {
+    document.getElementById("consultation-form").style.display = "none";
+}
+</script>
+
+<script src="../pages/expertRegister.js"></script>
+
 </body>
 </html>
