@@ -1,6 +1,6 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const Expert = require("../models/Expert");
+const Expert = require('../models/Expert');
 
 // ✅ Route to register an expert
 router.post("/register", async (req, res) => {
@@ -25,10 +25,12 @@ router.post("/register", async (req, res) => {
 
         // Save new expert
         const newExpert = new Expert({ fullName, email, expertise, linkedin });
-        await newExpert.save();
+       const response  =  await newExpert.save();
+       console.log(response)
 
         console.log("✅ Expert registered successfully!");
         res.status(201).json({ message: "Expert registered successfully!" });
+        res.send('successful')
 
     } catch (error) {
         console.error("❌ Server Error:", error);

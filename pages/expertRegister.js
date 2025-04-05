@@ -9,7 +9,7 @@ document.getElementById("expertForm").addEventListener("submit", async function 
     const responseMessage = document.getElementById("responseMessage");
 
     try {
-        const response = await fetch("/api/experts/register", {
+        const response = await fetch("http://localhost:3000/api/experts/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ fullName, email, expertise, linkedin })  // ✅ Correct Field Names
