@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 
             try{
-                console.log("dekh bhai yaha hu")
                 const response = await fetch('http://localhost:3000/api/login',{
                    method:'POST',
                    headers: {
@@ -71,10 +70,12 @@ document.addEventListener('DOMContentLoaded', async function() {
                     body: JSON.stringify(data)
             
                 });
-                console.log(response);
                 if (response.ok) {
                     const responseData = await response.json();
                     alert(responseData.message); // Display success message
+                   localStorage.setItem('firstName', responseData.firstName);
+                   console.log(responseData.firstName);
+                    
                     window.location.href = '../pages/dashboard.html'; // Redirect to dashboard
                 } else {
                     const errorData = await response.json();

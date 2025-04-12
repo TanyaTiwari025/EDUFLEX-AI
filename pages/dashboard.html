@@ -21,7 +21,7 @@
     <div class="main-content">
         <!-- Hero Section -->
         <div class="hero-section">
-            <h1>Welcome Back, Tanya!</h1>
+            <h1 id="welcomeText">Welcome</h1>
             <p>Your learning journey continues...</p>
         </div>
 
@@ -173,5 +173,9 @@
         chatbotModal.style.display = 'none';
     });
 </script>
-
+<script>
+    const username = localStorage.getItem('firstName');
+   
+    document.getElementById('welcomeText').textContent = `Welcome, ${username}!`;
+  </script>
 <script src="../js/aifun.js"></script>

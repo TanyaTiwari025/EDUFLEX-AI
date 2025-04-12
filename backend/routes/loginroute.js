@@ -42,8 +42,10 @@ router.post('/', async (req, res) => {
       sameSite: 'Strict',
       maxAge: 2 * 60 * 60 * 1000 // 2 hours
     });
-
-    res.status(200).json({ message: "Login successful" });
+    res.status(200).json({ 
+      message: "Login successful", 
+      firstName:user.firstName
+    });
 
   } catch (error) {
     console.error("Login error:", error);
