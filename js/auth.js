@@ -19,17 +19,18 @@ document.addEventListener('DOMContentLoaded', async function() {
         
 
             try {
-                const response = await fetch('http://localhost:3000/signup', {
+                const response = await fetch('http://localhost:3000/api/signup', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
+                    credentials: 'include',
                     body: JSON.stringify(data)
                 });
                 if (response.ok) {
                     // Redirect to login page on success
                     alert('Signup successful! You can now log in.');
-                    window.location.href = '../pages/login.html';
+                    window.location.href = '../public/login.html';
                 }
             }catch (error) {
                 console.error('Error:', error);
@@ -45,9 +46,9 @@ document.addEventListener('DOMContentLoaded', async function() {
             e.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-
-
+            
             if (email && password) {
+               
             const data = { email, password };
 
 
@@ -60,15 +61,17 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 
             try{
-                const response = await fetch('http://localhost:3000/login',{
+                console.log("dekh bhai yaha hu")
+                const response = await fetch('http://localhost:3000/api/login',{
                    method:'POST',
                    headers: {
                     'Content-Type': 'application/json'
                      },
+                     credentials: 'include', 
                     body: JSON.stringify(data)
-                     
-                   
+            
                 });
+                console.log(response);
                 if (response.ok) {
                     const responseData = await response.json();
                     alert(responseData.message); // Display success message

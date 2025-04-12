@@ -24,25 +24,24 @@
         </nav>
     </header>
     <!-- Expert Registration Form -->
-    <!-- <section id="expert-registration">
+    <section id="expert-registration">
         <h2>Register as an Expert</h2>
         <form id="expertForm">
-            <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname" required>
-    
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-    
+
             <label for="expertise">Expertise:</label>
             <input type="text" id="expertise" name="expertise" required>
-    
+
             <label for="linkedin">LinkedIn Profile:</label>
-            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/your-profile" required>
-    
+            <input type="url" id="linkedin" name="linkedin" required>
+
             <button type="submit">Register</button>
         </form>
-    
-        <p id="registration-message"></p> -->
+        <p id="responseMessage"></p>
     </section>
     
 
@@ -61,169 +60,9 @@
 
         <section id="expert-profiles">
             <h2>Expert Profiles</h2>
-            <div class="expert-list">
+            <div id="expert-list" class="expert-list">
 
-                <div class="expert-card">
-                    <img src="../images/tanya.jpg" alt="Tanya Tiwari">
-                    <h3>Tanya Tiwari</h3>
-                    <p>Currently pursuing B.Tech from Galgotias University. Holding offers from HCL and Capgemini. Expert in Data Analysis, providing insights into data-driven decision-making.</p>
-                    <p>Connect on <a href="https://www.linkedin.com/in/tanya-tiwari011" target="_blank">LinkedIn</a></p>
-                    
-                    <button class="request-btn" data-expert="Tanya Tiwari">Request Consultation</button>
                 
-                    <!-- Services Dropdown -->
-                    <div class="expert-services">
-                        <ul>
-                            <li>Data Analytics Consultation</li>
-                            <li>Machine Learning Model Review</li>
-                            <li>Career Guidance in Data Science</li>
-                            <li>Resume & LinkedIn Profile Review</li>
-                            <li>Technical Interview Preparation</li>
-                            <li>SQL & Python Training</li>
-                        </ul>
-                    </div>
-                </div>
-                
-
-                <!-- Expert 2 -->
-                <div class="expert-card">
-                    <img src="../images/sakshi.jpg" alt="Sakshi Singh">
-                    <h3>Sakshi Singh</h3>
-                    <p>Currently pursuing B.Tech CSE from Galgotias University. Holding an offer from Orange Business Tech. Expert in Networking, providing guidance on network security and administration.</p>
-                    <p>Connect on <a href="https://www.linkedin.com/in/sakshi-singh-suryavanshi-37600a22a/" target="_blank">LinkedIn</a></p>
-                
-                    <button class="request-btn" data-expert="Sakshi Singh">Request Consultation</button>
-                
-                    <!-- Services Dropdown -->
-                    <div class="expert-services">
-                        <ul>
-                            <li>Networking Fundamentals</li>
-                            <li>Network Security & Firewalls</li>
-                            <li>Cloud Networking Consultation</li>
-                            <li>Resume & LinkedIn Profile Review</li>
-                            <li>Technical Interview Preparation</li>
-                            <li>Cisco Networking Training</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--Expert 3-->
-                <div class="expert-card">
-                    <img src="../images/aman.jpg" alt="Aman Yadav">
-                    <h3>Aman Yadav</h3>
-                    <p>Currently pursuing B.Tech CSE from GNIOT. Ranked 4th in the Campus Coding Event. Expert in C, C++, and JavaScript, specializing in competitive programming and software development.</p>
-                    <p>Connect on <a href="https://www.linkedin.com/in/aman-yadav-b43b17236/" target="_blank">LinkedIn</a></p>
-                
-                    <button class="request-btn" data-expert="Aman Yadav">Request Consultation</button>
-                
-                    <!-- Services Dropdown -->
-                    <div class="expert-services">
-                        <ul>
-                            <li>C & C++ Programming Consultation</li>
-                            <li>JavaScript & Web Development</li>
-                            <li>Competitive Coding Strategies</li>
-                            <li>Resume & LinkedIn Profile Review</li>
-                            <li>Technical Interview Preparation</li>
-                            <li>Data Structures & Algorithms Training</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--Expert 4-->
-                <div class="expert-card">
-                    <img src="../images/ruchi.jpg" alt="Ruchi Rajput">
-                    <h3>Ruchi Rajput</h3>
-                    <p>Currently pursuing B.Tech CSE from Galgotias University. Expert in C++ and Frontend Development, specializing in UI/UX and web application design.</p>
-                    <p>Connect on <a href="https://www.linkedin.com/in/ruchi-rajput-bly/" target="_blank">LinkedIn</a></p>
-                    <button class="request-btn" data-expert="Ruchi Rajput">Request Consultation</button>
-                
-                    <!-- Services Dropdown -->
-                    <div class="expert-services">
-                        <ul>
-                            <li>Frontend Development Consultation</li>
-                            <li>C++ Programming Guidance</li>
-                            <li>UI/UX Design Fundamentals</li>
-                            <li>Resume & LinkedIn Profile Review</li>
-                            <li>Technical Interview Preparation</li>
-                            <li>Web Development Best Practices</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--Expert 5-->
-                <div class="expert-card">
-                    <img src="../images/siddhant.jpg" alt="Siddhant Singh">
-                    <h3>Siddhant Singh</h3>
-                    <p>Currently pursuing B.Tech CSE from Galgotias University. Holding an offer from EY. Expert in Python, specializing in automation, data analysis, and backend development.</p>
-                    <p>Connect on <a href="https://www.linkedin.com/in/thakur-siddhant-singh-b7932025b/" target="_blank">LinkedIn</a></p>
-                
-                    <button class="request-btn" data-expert="Siddhant Singh">Request Consultation</button>
-                
-                    <!-- Services Dropdown -->
-                    <div class="expert-services">
-                        <ul>
-                            <li>Python Programming Consultation</li>
-                            <li>Data Automation & Scripting</li>
-                            <li>Career Guidance in Software Development</li>
-                            <li>Resume & LinkedIn Profile Review</li>
-                            <li>Technical Interview Preparation</li>
-                            <li>Machine Learning & AI Basics</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="expert-card">
-                    <img src="../images/saurabh.jpg" alt="Saurabh Kumar Jaiswal">
-                    <h3>Saurabh Kumar Jaiswal</h3>
-                    <p>Currently pursuing B.Tech CSE from Galgotias University. Holding an offer from LTI Mindtree. Expert in Cloud Computing and C++.</p>
-                    <p>Connect on <a href="https://www.linkedin.com/in/saurabh-kumar-jaiswal-3a4801291/" target="_blank">LinkedIn</a></p>
-                    <button class="request-btn" data-expert="Saurabh Kumar Jaiswal">Request Consultation</button>
-                    <div class="expert-services">
-                        <ul>
-                            <li>Cloud Computing Consultation</li>
-                            <li>C++ Programming Guidance</li>
-                            <li>Career Advice in IT Industry</li>
-                            <li>Resume & LinkedIn Profile Review</li>
-                            <li>Mock Technical Interviews</li>
-                            <li>Project Guidance in Cloud</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="expert-card">
-                    <img src="../images/vikram.jpg" alt="Vikram Vishal Singh">
-                    <h3>Vikram Vishal Singh</h3>
-                    <p>Currently pursuing B.Tech CSE from Galgotias University. Expert in Python, C++, and Web Development.</p>
-                    <p>Connect on <a href="https://www.linkedin.com/in/vikram-vishal-singh-803693251/" target="_blank">LinkedIn</a></p>
-                    <button class="request-btn" data-expert="Vikram Vishal Singh">Request Consultation</button>
-                    <div class="expert-services">
-                        <ul>
-                            <li>Python Programming Consultation</li>
-                            <li>C++ Development Guidance</li>
-                            <li>Web Development Coaching</li>
-                            <li>Career Advice in Software Engineering</li>
-                            <li>Technical Interview Preparation</li>
-                            <li>Portfolio & Resume Review</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="expert-card">
-                    <img src="../images/ankur.jpg" alt="Ankur Shrivastava">
-                    <h3>Ankur Shrivastava</h3>
-                    <p>Currently pursuing B.Tech CSE from Galgotias University. Research Intern at IIT Mandi.</p>
-                    <p>Connect on <a href="https://www.linkedin.com/in/ankur-srivastava2907/" target="_blank">LinkedIn</a></p>
-                    <button class="request-btn" data-expert="Ankur Shrivastava">Request Consultation</button>
-                    <div class="expert-services">
-                        <ul>
-                            <li>Research Guidance</li>
-                            <li>Machine Learning & AI Consultation</li>
-                            <li>Python for Research Applications</li>
-                            <li>Technical Paper Writing Assistance</li>
-                            <li>Mock Research Interviews</li>
-                            <li>Resume & Research Portfolio Review</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
 
             <!-- Consultation Form (Initially Hidden) -->
@@ -387,7 +226,6 @@
         <p>&copy; 2024 Educational Website</p>
     </footer>
 
-    <script src="../js/expert.js"></script>
 
     <!-- Floating Chatbot Button -->
 <div id="chatbot-button" class="chatbot-button">
@@ -494,7 +332,6 @@
 }
 
 </style>
-
 <!-- JavaScript to Control Chatbot Modal -->
 <script>
     const chatbotButton = document.getElementById('chatbot-button');
@@ -605,6 +442,7 @@ function closeConsultationForm() {
 </script>
 
 <script src="../pages/expertRegister.js"></script>
+<script src="../js/expert.js"></script>
 
 </body>
 </html>

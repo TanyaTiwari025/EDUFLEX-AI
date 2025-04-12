@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 require('dotenv').config();
-
+const authMiddleware = require('./backend/controllers/authmiddleware')
 const express = require('express');
 const bodyParser = require('body-parser');
 const connectDB = require('./db');
 const cors = require('cors');
-
+const path = require('path')
 const app = express();
 const PORT = 3000;
 
@@ -33,13 +33,13 @@ const emailRoutes = require("./backend/routes/emailRoutes");
 const expertRoutes = require("./backend/routes/expertRoutes");  // Expert Routes
 
 // ✅ Use Routes
-app.use('/api/ai', aiRoutes);
+app.use('/api/ai',authMiddleware, aiRoutes);
 app.use('/api/signup', signupRoutes);
 app.use('/api/login', loginRoutes);
-app.use('/api/upload', uploadRoutes);
-app.use("/api/email", emailRoutes);
-app.use("/api/experts", expertRoutes); // Experts API
-
+app.use('/api',authMiddleware, uploadRoutes);
+app.use("/api/pages/email",authMiddleware, emailRoutes);
+app.use("/api/pages/expert",authMiddleware, expertRoutes); // Experts API
+//app.use("/api/pages",authMiddleware)
 // ✅ MongoDB Connection Status
 mongoose.connection.on("connected", () => {
     console.log("✅ MongoDB Connected!");
@@ -62,9 +62,11 @@ async function checkCollections() {
 mongoose.connection.once("open", checkCollections);
 
 // ✅ Default Route
-app.get("/", (req, res) => {
-    res.send("✅ Server is running!");
-});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Homepage', 'index.html'));
+  });
+  
 
 // ✅ Start Server
 app.listen(PORT, () => {

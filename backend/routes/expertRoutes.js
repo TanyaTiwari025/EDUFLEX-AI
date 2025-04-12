@@ -25,12 +25,10 @@ router.post("/register", async (req, res) => {
 
         // Save new expert
         const newExpert = new Expert({ fullName, email, expertise, linkedin });
-       const response  =  await newExpert.save();
-       console.log(response)
+        const response = await newExpert.save();
+        console.log("✅ Expert registered:", response);
 
-        console.log("✅ Expert registered successfully!");
-        res.status(201).json({ message: "Expert registered successfully!" });
-        res.send('successful')
+        res.status(201).json({ message: "Expert registered successfully!", expert: response });
 
     } catch (error) {
         console.error("❌ Server Error:", error);

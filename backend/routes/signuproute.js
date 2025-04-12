@@ -1,38 +1,38 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/usermodels');
+const jwt = require('jsonwebtoken'); // ✅ Needed for token
 const bcrypt = require('bcrypt');
 
-// Handle form submission for signup
-router.post('/signup', async (req, res) => {
-  
-    const { firstName,lastName,email, password } = req.body;
+const JWT_SECRET = process.env.JWT_SECRET; // ✅ Replace this with env variable in production
 
-    // Simple validation
-    if ( !email || !password) {
+router.post('/', async (req, res) => {
+    const { firstName, lastName, email, password } = req.body;
+
+    if (!email || !password) {
         return res.status(400).send('All fields are required');
     }
+
     try {
-    // Check for existing user
-    const existingUser = await User.findOne( { email:"email" });
-    if (existingUser) {
-        return res.status(400).json({message:'Username or email already exists'});
-    }
-    // Create a new user instance
-    const newUser = new User({firstName,lastName,email, password});
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'Email already exists' });
+        }
 
-  
-        
-        // Save user to the database
-        const response = await newUser.save();
-        console.log(response)
-        res.send('Signup successful! User data saved.');
+       // const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = new User({
+            firstName,
+            lastName,
+            email,
+            password
+        });
 
-
-        
+        await newUser.save();
+        res.status(201).json({ message: 'Signup successful!' });
     } catch (err) {
         console.error(err);
         res.status(500).send('Server error');
     }
 });
+
 module.exports = router;
