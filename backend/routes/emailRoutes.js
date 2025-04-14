@@ -1,34 +1,48 @@
+// backend/routes/consultationRoutes.js
+
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
 
-// Email sending route
 router.post("/send-consultation-email", async (req, res) => {
-    const { name, email, message } = req.body;
+  const {
+    studentName,
+    studentEmail,
+    service,
+    expertName,
+    expertEmail
+  } = req.body;
 
-    // Email configuration
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: process.env.EMAIL_USER, // Add your email in .env
-            pass: process.env.EMAIL_PASS, // Add your password in .env
-        },
-    });
-
-    const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: "expert@example.com", // Replace with actual recipient
-        subject: "New Consultation Request",
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-    };
-
-    try {
-        await transporter.sendMail(mailOptions);
-        res.status(200).json({ message: "Email sent successfully!" });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: "Failed to send email" });
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER, // your email
+      pass: process.env.EMAIL_PASS  // your app password
     }
+  });
+
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: expertEmail,
+    subject: `New Consultation Request from ${studentName}`,
+    text: `
+You have received a new consultation request:
+
+Student Name: ${studentName}
+Student Email: ${studentEmail}
+Requested Service: ${service}
+
+Please reach out to the student at your earliest convenience.
+    `
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: "Consultation request email sent to the expert!" });
+  } catch (err) {
+    console.error("❌ Email sending failed:", err);
+    res.status(500).json({ error: "Failed to send consultation email." });
+  }
 });
 
 module.exports = router;

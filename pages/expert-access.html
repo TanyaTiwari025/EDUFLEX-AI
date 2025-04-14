@@ -60,36 +60,35 @@
 
         <section id="expert-profiles">
             <h2>Expert Profiles</h2>
-            <div id="expert-list" class="expert-list">
-
-                
-            </div>
-
-            <!-- Consultation Form (Initially Hidden) -->
+            <div id="expert-list" class="expert-list"></div>
+          
             <div id="consultation-form" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeConsultationForm()">&times;</span>
-                    <h2 id="consultation-title">Request Consultation</h2>
-            
-                    <form id="consultationRequestForm">
-                        <label for="student-name">Your Name:</label>
-                        <input type="text" id="student-name" name="studentName" required>
-            
-                        <label for="student-email">Your Email:</label>
-                        <input type="email" id="student-email" name="studentEmail" required>
-            
-                        <label for="service">Select Service:</label>
-                        <select id="service" name="service" required></select>
-            
-                        <button type="submit">Send Request</button>
-                    </form>
-                </div>
+              <div class="modal-content">
+                <span class="close" onclick="closeConsultationForm()">&times;</span>
+                <h2 id="consultation-title">Request Consultation</h2>
+          
+                <form id="consultationRequestForm">
+                  <label for="student-name">Your Name:</label>
+                  <input type="text" id="student-name" name="studentName" required>
+          
+                  <label for="student-email">Your Email:</label>
+                  <input type="email" id="student-email" name="studentEmail" required>
+          
+                  <label for="service">Select Service:</label>
+                  <select id="service" name="service" required></select>
+          
+                  <input type="hidden" id="expert-id" name="expertId">
+                  <input type="hidden" id="expert-name" name="expertName">
+                  <input type="hidden" id="expert-email" name="expertEmail">
+          
+                  <button type="submit">Send Request</button>
+                </form>
+              </div>
             </div>
-
-        </section>
+          </section>
 
         <section id="services">
-            <h2>Expert Services Offered</h2>
+            <h2 id="expertServices">Expert Services Offered</h2>
             <ul>
                 <li>
                     <strong>1-on-1 Consultation:</strong> Personalized sessions with industry experts to address your specific career and academic queries.
@@ -440,9 +439,9 @@ function closeConsultationForm() {
     document.getElementById("consultation-form").style.display = "none";
 }
 </script>
-
-<script src="../pages/expertRegister.js"></script>
 <script src="../js/expert.js"></script>
+<script src="../pages/expertRegister.js"></script>
+
 
 </body>
 </html>

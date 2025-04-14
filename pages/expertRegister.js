@@ -74,10 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>Connect on <a href="${expert.linkedin}" target="_blank">LinkedIn</a></p>
           <button class="request-btn" data-expert="${expert.fullName}">Request Consultation</button>
         `;
+        expertCard.querySelector(".request-btn").addEventListener("click", () => {
+          openConsultationForm(expert);
+        });
+
         expertList.appendChild(expertCard);
       });
     })
     .catch(err => {
       console.error("❌ Failed to load experts:", err);
     });
+
 });
+
