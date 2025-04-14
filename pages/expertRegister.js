@@ -16,9 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const linkedin = document.getElementById("linkedin").value.trim();
 
     try {
-      const response = await fetch("http://localhost:3000/api/experts/register", {
+      const response = await fetch("http://localhost:3000/api/pages/expert/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ fullName, email, expertise, linkedin })
       });
 
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Load existing experts
-  fetch("http://localhost:3000/api/experts/all")
+  fetch("http://localhost:3000/api/pages/expert/all")
     .then(res => res.json())
     .then(data => {
       if (!Array.isArray(data)) return;

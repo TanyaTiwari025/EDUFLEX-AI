@@ -8,7 +8,8 @@ const cors = require('cors');
 const path = require('path')
 const app = express();
 const PORT = 3000;
-
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 // ✅ Connect to MongoDB
 connectDB();
 
