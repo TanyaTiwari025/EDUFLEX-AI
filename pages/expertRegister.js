@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <h3>${fullName}</h3>
           <p>Expert in ${expertise}</p>
           <p>Connect on <a href="${linkedin}" target="_blank">LinkedIn</a></p>
+          <p>Email: ${email}"</p>
           <button class="request-btn" data-expert="${fullName}">Request Consultation</button>
         `;
 

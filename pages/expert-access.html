@@ -75,7 +75,16 @@
                   <input type="email" id="student-email" name="studentEmail" required>
           
                   <label for="service">Select Service:</label>
-                  <select id="service" name="service" required></select>
+                  <select id="service" name="service" required>
+                    <option value="">-- Select a Service --</option>
+                    <option value="Career Guidance">Career Guidance</option>
+                    <option value="Resume Review">Resume Review</option>
+                    <option value="Mock Interview">Mock Interview</option>
+                    <option value="Technical Mentorship">Technical Mentorship</option>
+                    <option value="Study Abroad Advice">Study Abroad Advice</option>
+                    <option value="Freelancing Tips">Freelancing Tips</option>
+                  </select>
+                  
           
                   <input type="hidden" id="expert-id" name="expertId">
                   <input type="hidden" id="expert-name" name="expertName">
@@ -366,79 +375,78 @@
 
 </script>
     <!---dynamicallyfunction --->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const requestButtons = document.querySelectorAll(".request-btn");
-    const consultationForm = document.getElementById("consultation-form");
-    const serviceDropdown = document.getElementById("service");
-    const consultationTitle = document.getElementById("consultation-title");
-    const form = document.getElementById("consultationRequestForm");
 
-    requestButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const expertCard = this.closest(".expert-card");
-            const expertName = expertCard.querySelector("h3").innerText;
-            const services = expertCard.querySelectorAll(".expert-services ul li");
+//     document.addEventListener("DOMContentLoaded", function () {
+//     const requestButtons = document.querySelectorAll(".request-btn");
+//     const consultationForm = document.getElementById("consultation-form");
+//     const serviceDropdown = document.getElementById("service");
+//     const consultationTitle = document.getElementById("consultation-title");
+//     const form = document.getElementById("consultationRequestForm");
 
-            // Update form title
-            consultationTitle.innerText = `Request Consultation with ${expertName}`;
+//     requestButtons.forEach(button => {
+//         button.addEventListener("click", function () {
+//             const expertCard = this.closest(".expert-card");
+//             const expertName = expertCard.querySelector("h3").innerText;
+//             const services = expertCard.querySelectorAll(".expert-services ul li");
 
-            // Store expert name in form
-            form.setAttribute("data-expert", expertName);
+//             // Update form title
+//             consultationTitle.innerText = `Request Consultation with ${expertName}`;
 
-            // Clear existing dropdown options
-            serviceDropdown.innerHTML = "";
+//             // Store expert name in form
+//             form.setAttribute("data-expert", expertName);
 
-            // Populate dropdown with expert's services
-            services.forEach(service => {
-                const option = document.createElement("option");
-                option.textContent = service.innerText;
-                serviceDropdown.appendChild(option);
-            });
+//             // Clear existing dropdown options
+//             serviceDropdown.innerHTML = "";
 
-            // Show form
-            consultationForm.style.display = "block";
-        });
-    });
+//             // Populate dropdown with expert's services
+//             services.forEach(service => {
+//                 const option = document.createElement("option");
+//                 option.textContent = service.innerText;
+//                 serviceDropdown.appendChild(option);
+//             });
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+//             // Show form
+//             consultationForm.style.display = "block";
+//         });
+//     });
 
-        const studentName = document.getElementById("student-name").value;
-        const studentEmail = document.getElementById("student-email").value;
-        const selectedService = document.getElementById("service").value;
-        const expertName = form.getAttribute("data-expert");
+//     form.addEventListener("submit", function (event) {
+//         event.preventDefault();
 
-        // Send data to backend
-        fetch("/send-consultation-request", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                expertName,
-                studentName,
-                studentEmail,
-                selectedService
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            closeConsultationForm();
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            alert("Failed to send request. Please try again.");
-        });
-    });
-});
+//         const studentName = document.getElementById("student-name").value;
+//         const studentEmail = document.getElementById("student-email").value;
+//         const selectedService = document.getElementById("service").value;
+//         const expertName = form.getAttribute("data-expert");
 
-// Function to close the form
-function closeConsultationForm() {
-    document.getElementById("consultation-form").style.display = "none";
-}
-</script>
+//         // Send data to backend
+//         fetch("/send-consultation-request", {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify({
+//                 expertName,
+//                 studentName,
+//                 studentEmail,
+//                 selectedService
+//             })
+//         })
+//         .then(response => response.json())
+//         .then(data => {
+//             alert(data.message);
+//             closeConsultationForm();
+//         })
+//         .catch(error => {
+//             console.error("Error:", error);
+//             alert("Failed to send request. Please try again.");
+//         });
+//     });
+// });
+
+// // Function to close the form
+// function closeConsultationForm() {
+//     document.getElementById("consultation-form").style.display = "none";
+// }
 <script src="../js/expert.js"></script>
 <script src="../pages/expertRegister.js"></script>
 

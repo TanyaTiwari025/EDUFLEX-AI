@@ -27,7 +27,7 @@ function openConsultationForm(expert) {
     };
   
     try {
-      const res = await fetch("http://localhost:3000/api/pages/send-consultation-email", {
+      const res = await fetch("http://localhost:3000/api/pages/email/send-consultation-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)

@@ -38,7 +38,7 @@ app.use('/api/ai',authMiddleware, aiRoutes);
 app.use('/api/signup', signupRoutes);
 app.use('/api/login', loginRoutes);
 app.use('/api',authMiddleware, uploadRoutes);
-app.use("/api/pages/email",authMiddleware, emailRoutes);
+app.use("/api/pages/email", emailRoutes);
 app.use("/api/pages/expert",authMiddleware, expertRoutes); // Experts API
 //app.use("/api/pages",authMiddleware)
 // ✅ MongoDB Connection Status

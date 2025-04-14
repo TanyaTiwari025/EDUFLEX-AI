@@ -11,12 +11,25 @@ const transporter = nodemailer.createTransport({
 });
 
 // Function to send email to the expert
-async function sendExpertEmail(expertEmail, studentName, serviceRequested) {
+async function sendExpertEmail(expertEmail, studentName, studentEmail, serviceRequested) {
     const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: expertEmail,
+        from: process.env.EMAIL_USER, // Your email address (admin/system)
+        to: expertEmail,              // Expert's email address
         subject: "New Consultation Request",
-        text: `${studentName} has requested a consultation for "${serviceRequested}". Please review and accept the request.`,
+        text: `
+Hello ${expertEmail},
+
+You have received a new consultation request.
+
+Student Name: ${studentName}
+Student Email: ${studentEmail}
+
+Requested Service: ${serviceRequested}
+
+Please review the request and contact the student at your earliest convenience.
+
+Best Regards,
+Your System`,
     };
 
     try {
