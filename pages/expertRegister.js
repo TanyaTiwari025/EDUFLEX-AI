@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <h3>${expert.fullName}</h3>
           <p>Expert in ${expert.expertise}</p>
           <p>Connect on <a href="${expert.linkedin}" target="_blank">LinkedIn</a></p>
+          <p>Email: <a href="mailto:${expert.email}">${expert.email}</a></p>
           <button class="request-btn" data-expert="${expert.fullName}">Request Consultation</button>
         `;
         expertCard.querySelector(".request-btn").addEventListener("click", () => {

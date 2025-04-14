@@ -374,79 +374,7 @@
 });
 
 </script>
-    <!---dynamicallyfunction --->
 
-//     document.addEventListener("DOMContentLoaded", function () {
-//     const requestButtons = document.querySelectorAll(".request-btn");
-//     const consultationForm = document.getElementById("consultation-form");
-//     const serviceDropdown = document.getElementById("service");
-//     const consultationTitle = document.getElementById("consultation-title");
-//     const form = document.getElementById("consultationRequestForm");
-
-//     requestButtons.forEach(button => {
-//         button.addEventListener("click", function () {
-//             const expertCard = this.closest(".expert-card");
-//             const expertName = expertCard.querySelector("h3").innerText;
-//             const services = expertCard.querySelectorAll(".expert-services ul li");
-
-//             // Update form title
-//             consultationTitle.innerText = `Request Consultation with ${expertName}`;
-
-//             // Store expert name in form
-//             form.setAttribute("data-expert", expertName);
-
-//             // Clear existing dropdown options
-//             serviceDropdown.innerHTML = "";
-
-//             // Populate dropdown with expert's services
-//             services.forEach(service => {
-//                 const option = document.createElement("option");
-//                 option.textContent = service.innerText;
-//                 serviceDropdown.appendChild(option);
-//             });
-
-//             // Show form
-//             consultationForm.style.display = "block";
-//         });
-//     });
-
-//     form.addEventListener("submit", function (event) {
-//         event.preventDefault();
-
-//         const studentName = document.getElementById("student-name").value;
-//         const studentEmail = document.getElementById("student-email").value;
-//         const selectedService = document.getElementById("service").value;
-//         const expertName = form.getAttribute("data-expert");
-
-//         // Send data to backend
-//         fetch("/send-consultation-request", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify({
-//                 expertName,
-//                 studentName,
-//                 studentEmail,
-//                 selectedService
-//             })
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//             alert(data.message);
-//             closeConsultationForm();
-//         })
-//         .catch(error => {
-//             console.error("Error:", error);
-//             alert("Failed to send request. Please try again.");
-//         });
-//     });
-// });
-
-// // Function to close the form
-// function closeConsultationForm() {
-//     document.getElementById("consultation-form").style.display = "none";
-// }
 <script src="../js/expert.js"></script>
 <script src="../pages/expertRegister.js"></script>
 
